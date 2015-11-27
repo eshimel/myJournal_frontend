@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Bootstrap</title>
+  <title>MyJournal</title>
 </head>
 <body>
 
@@ -14,20 +14,57 @@
 <header class="bgimage">
   <div class="container">
     <h1>Headline</h1>
+
   </div>
 </header>
 
+<div class="container">
+  <div class="row">
+    <section class="col-xs-12">
+  <form id="register">
+      <input name="email" type="text" placeholder="email">
+      <input name="password" type="password" placeholder="password">
+      <input name="password_confirmation" type="password" placeholder="password confirmation">
+      <input name="register" type="submit" value="Register">
+      </form>
+    <form id="login">
+       <input name="email" type="text" placeholder="email">
+       <input name="password" type="password" placeholder="password">
+       <input name="login" type="submit" value="Login">
+       <input class="token" name="token" type="hidden">
+       <input class="id" name="id" type="hidden">
+      </form>
+    </section>
+    </div>
+    </div>
+
+
 
 <div class="container">
-<h1>MyJournal</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero, cupiditate veniam officiis itaque in porro iure fugit iusto reprehenderit commodi earum cum blanditiis quos error similique quod, facere! Hic.</p>
+    <div class="row">
+        <section class="col-sm-6 col-md-8 col-lg-8">
+
+          <h1>MyJournal</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero, cupiditate veniam officiis itaque in porro iure fugit iusto reprehenderit commodi earum cum blanditiis quos error similique quod, facere! Hic.</p>
+
+          <form id="entries">
+              <input name="entries" type="submit" value="  entry">
+              <textarea id="entry" name="entry" rows="15"  cols="75">
+                Write your next entry here.
+              </textarea>
+              <input class="token" name="token" type=" hidden">
+              <input class="id" name="id" type="hidden">
+          </form>
+        </section>
+
+        <section class="col-sm-6 col-md-4 col-lg-4">
+        <img class="icon" src="images/icon-exoticpets.svg" alt="Icon">
+         <h1>MyJournal</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero, cupiditate veniam officiis itaque in porro iure fugit iusto reprehenderit commodi earum cum blanditiis quos error similique quod, facere! Hic.</p>
+        </section>
+  </div>
 </div>
 
-
-<div class="container-fluid">
-<h1>Headline</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero, cupiditate veniam officiis itaque in porro iure fugit iusto reprehenderit commodi earum cum blanditiis quos error similique quod, facere! Hic.</p>
-</div>
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
