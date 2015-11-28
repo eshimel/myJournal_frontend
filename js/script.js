@@ -89,19 +89,18 @@ $('#login').submit(function(e) {
       }
     });
 });
-$("#contributions").on('submit',function(e) {
+$("#entries").on('submit',function(e) {
     e.preventDefault();
-    var submission = wrap('submission', form2object(this));
-    myJournalAPI.contributions(token, function(error, data){
-      if (error){
-        console.log("contribution failed");
+    var jpost = wrap('jpost', form2object(this));
+      if (e){
+        console.error(e);
       }
       else
       {
         myJournalAPI.user = data.user;
         var token = data.user.token;
       }
-    });
+
   });
 
 
