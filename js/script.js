@@ -89,22 +89,51 @@ $('#login').submit(function(e) {
       }
     });
 });
-$("#contributions").on('submit',function(e) {
-    e.preventDefault();
-    var submission = wrap('submission', form2object(this));
-    myJournalAPI.contributions(token, function(error, data){
-      if (error){
-        console.log("contribution failed");
-      }
-      else
-      {
+
+
+ $('#entries').on('submit', function(e) {
+   var token = $(this).children('[name="token"]').val();
+   e.preventDefault();
+   myJournalAPI.entries(token, function(err,data){
+    if(err){}
+      else {
         myJournalAPI.user = data.user;
-        var token = data.user.token;
+       //save the current user's token so it can be called in following fns
+       var token = data.user.token;
+        console.log(JSON.stringify(entriesData, null, 4));
       }
+   });
+ });
+
+
+
+
+  /*$('#entries').on('submit', function(e) {
+   var token = $(this).children('[name="token"]').val();
+   e.preventDefault();
+   myJournalAPI.createEntry(token, function(err,data){
+     myJournalAPI.user = data.user.id;
+
+     $('#result').val(JSON.stringify(data, null, 4));
+   });
+ });*/
+
+
+   /* var formData = new FormData(event.target);
+    $.ajax({
+      url: 'http://localhost:3000/entries',
+      method: 'POST' ,
+      contentType: false,
+      processData: false,
+      data: formData
+
+    }).done(function(data) {
+      $('#result').html(JSON.stringify(data,null, 2));
+    }).fail(function(jqxhr){
+      console.error(jqxhr);
     });
   });
-
-
+});
 /*$("#contribution").submit(function(){
     var url = $(this).attr('href');
     $("#right").load("contribution.html + #center + #right");
@@ -164,4 +193,5 @@ Users make a contribution and submit it upon login
 A contribution is appended to the story in progress after submission
 Stories are made up of ten contributions
 */
+
 });

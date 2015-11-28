@@ -38,18 +38,18 @@ myJournalAPI.login = function login(credentials, callback) {
   }, callback);
 };
 
-myJournalAPI.contributions = function contributions(token, callback) {
-  this.ajax({
-    method: 'POST',
-    // url: 'http://httpbin.org/post',
-    url: this.server + '/contributions',
-   contentType: 'application/json; charset=utf-8',
+myJournalAPI.entries = function (token, callback) {
+    this.ajax({
+      method: 'POST',
+      url: this.server + '/entries',
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json; charset=utf-8',
       data: JSON.stringify({}),
       dataType: 'json',
     }, callback);
-
-
-};
+  };
 
 myJournalAPI.clues = function clues(token, callback) {
    this.ajax({
