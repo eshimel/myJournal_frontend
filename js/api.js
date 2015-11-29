@@ -1,6 +1,6 @@
   'use strict'
 //if storwe API isn't undefined it will remain its original value
-var myJournalAPI = myJournalAPI || {};
+/*var myJournalAPI = myJournalAPI || {};
 
 //    myJournalAPI.login = function
 // myJournalAPI is the object!
@@ -60,9 +60,9 @@ myJournalAPI.clues = function clues(token, callback) {
      },
      dataType: 'json'
     }, callback);
- };
+ };*/
 
-  //Authenticated api actions
+  //THIS IS ALL NONE WORKING    uthenticated api actions
 
 
   /*createContribution: function (token, callback) {
@@ -126,3 +126,120 @@ myJournalAPI.inprogress = function inprogress(id, callback) {
 */
 
 
+var myJournalAPI = {
+  url: 'http://localhost:3000',
+
+
+  ajax: function (config, cb) {
+    $.ajax(config).done(function(data, textStatus, jqxhr) {
+      cb(null, data);
+    }).fail(function(jqxhr, status, error) {
+      cb({jqxher: jqxhr, status: status, error: error});
+    });
+  },
+
+
+
+
+
+  register: function (credentials, callback) {
+    this.ajax({
+      method: 'POST',
+      url: this.url + '/register',
+      contentType: 'application/json',
+      data: JSON.stringify(credentials),
+      dataType: 'json'
+    }, callback);
+    console.log("success");
+  },
+
+  login: function (credentials, callback) {
+    this.ajax({
+      method: 'POST',
+      url: this.url + '/login',
+      contentType: 'application/json',
+      data: JSON.stringify(credentials),
+      dataType: 'json'
+    }, callback);
+    console.log("success");
+  },
+
+  logout: function (token, id, callback) {
+    this.ajax({
+      method: 'DELETE',
+      url: this.url + '/logout/' + id,
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json',
+      dataType: 'json'
+    }, callback);
+    console.log("success");
+  },
+
+  list_entries: function (token, callback) {
+    this.ajax({
+      method: 'GET',
+      url: this.url + '/entries',
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json; charset=utf-8'
+    }, callback);
+  },
+
+  list_quick_posts: function(token, list_quick_posts, callback){
+    this.ajax({
+      method: 'GET',
+      url: this.url + '/quick_posts',
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify(list_quick_posts),
+      dataType: 'json'
+    }, callback);
+  },
+
+  new_entry: function (token, new_entry, callback) {
+    this.ajax({
+      method: 'POST',
+      url: this.url + '/entries',
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify(new_entry),
+      dataType: 'json'
+
+    }, callback);
+  },
+
+  new_quick_post: function (token, new_quick_post, callback) {
+    this.ajax({
+      method: 'POST',
+      url: this.url + '/quick_posts',
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify(new_quick_post),
+      dataType: 'json'
+
+    }, callback);
+  },
+
+  change_entry: function (token, beer_id, change_entry, callback) {
+    this.ajax({
+      method: 'PATCH',
+      url: this.url + '/entries' + id,
+      headers: {
+        Authorization: 'Token token=' + token
+      },
+      contentType: 'application/json; charset=utf-8',
+      data: JSON.stringify(change_entry),
+      dataType: 'json'
+
+    }, callback);
+  },
+};

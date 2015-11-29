@@ -1,6 +1,20 @@
 .bgimage {
-  background-image: url('../images/reptiles.jpg');
+  background-image: url('../images/pencil.svg');
   background-position: center center;
   background-size: cover;
+  background-color : 90c3d4;
   height: 200px;
+
+
 }
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 3em;
+}
+
+/*font-family: 'Indie Flower', cursive;
+font-family: 'Inconsolata', ;
+font-family: 'Exo', sans-serif;
+font-family: 'Architects Daughter', cursive;
+font-family: 'Amatic SC', cursive; */
+

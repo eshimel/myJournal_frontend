@@ -42,7 +42,7 @@ $("#contribution").submit(function() {
       },
 
       url: "http://localhost:8081/sniper/estabelecimento/pesquisar.action"
-    }
+    };
 
     $(this).ajaxSubmit(options);
     return false;
