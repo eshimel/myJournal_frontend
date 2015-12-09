@@ -229,7 +229,7 @@ var myJournalAPI = {
     }, callback);
   },
 
-  change_entry: function (token, beer_id, change_entry, callback) {
+  change_entry: function (token, entry_id, change_entry, callback) {
     this.ajax({
       method: 'PATCH',
       url: this.url + '/entries' + id,

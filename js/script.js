@@ -58,7 +58,7 @@ $(document).ready(function() {
 
       });
 
-      $('.logout').on('click', function(e) {
+      $('#logout').on('click', function(e) {
         var token = $('.token').val();
         var id = $('.id').val();
         var cb = function cb(error, data) {
@@ -67,7 +67,8 @@ $(document).ready(function() {
             return;
           }
         };
-        myJournalAPI.logout(token, id, cb);
+        myJournalAPI.logout(token, id, cb
+          );
       });
 
 
@@ -91,6 +92,11 @@ $(document).ready(function() {
           }
         });
       });
+      //Showing entries function
+
+      //deleting entry function
+
+      //update entry function
 
       //  Submitting new quick_post function
 
@@ -98,7 +104,7 @@ $(document).ready(function() {
         e.preventDefault();
         var token = $('.token').val();
         var new_quick_post = wrap('quick_post', form2object(this));
-        myJournalAPI.new_beer(token, new_quick_post, function(err, quick_postData) {
+        myJournalAPI.new_quick_post(token, new_quick_post, function(err, quick_postData) {
           if (err) {
             // do something with the error
             return;
@@ -118,7 +124,7 @@ $(document).ready(function() {
         var entry_id = entryID();
         var token = $('.token').val();
         var change_entry = wrap('entry', form2object(this));
-        myJournalAPI.change_beer(token, entry_id, change_entry, function(err,
+        myJournalAPI.change_entry(token, entry_id, change_entry, function(err,
           entryData) {
           if (err) {
             // do something with the error

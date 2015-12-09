@@ -40,9 +40,15 @@
        <input class="token" name="token" type="hidden">
        <input class="id" name="id" type="hidden">
       </form>
+
+    <form id="logout">
+      <input name="logout" type="submit" value="Logout">
+      <input class="token" name="token" type="hidden">
+       <input class="id" name="id" type="hidden">
+      </form>
     </section>
-    </div>
-    </div>
+  </div>
+</div>
 
 
 
@@ -54,22 +60,27 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero, cupiditate veniam officiis itaque in porro iure fugit iusto reprehenderit commodi earum cum blanditiis quos error similique quod, facere! Hic.</p>
 
 
-            <form id="entries">
-       <input name="title" type="text" placeholder="title">
-       <input name="jphost" type="text" placeholder="entry">
-       <input name="entry" type="submit" value="Entry">
-       <input class="token" name="token" type="hidden">
-       <input class="id" name="id" type="hidden">
-      </form>
+          <form id="entries">
+            <h1>New Entry</h1>
+              <input name="title" type="text" placeholder="title">
+              <input name="jphost" type="text" placeholder="entry">
+              <input name="entry" type="submit" value="Entry">
+              <input class="token" name="token" type="hidden">
+              <input class="id" name="id" type="hidden">
+          </form>
 
+          <div id="myEntries" value="Entry">
+            <ul class="myEntries">My Entries</ul>
+            <li></li>
+          </div>
         </section>
 
         <section class="col-sm-6 col-md-4 col-lg-4">
         <img class="icon" src="images/my_Journal.svg" alt="Icon">
           <h1>How has your day been?</h1>
-           <form id="quick_posts">
-             <input name="quick_posts" type="text" placeholder="1-10">
-             <input name="post" type="submit" value="QuickPost">
+           <form id="quick_post">
+              <input name="One_to_Ten" type="text" value="One_to_Ten">
+              <input name="Rate" type="submit" value="Quick_post">
              <input class="token" name="token" type="hidden">
              <input class="id" name="id" type="hidden">
             </form>
