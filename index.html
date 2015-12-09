@@ -9,6 +9,12 @@
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Inconsolata:400,700|Exo:400,300italic,500italic,800italic|Architects+Daughter|Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <title>MyJournal</title>
 </head>
+
+  <script id="list_entry" type="x-handolebars-template">
+   {{#each this}}
+     <li class = "myEntries"><a href="/{{Entries}}"> {{title}} -- Entry: {{jpost}}</a></li>
+   {{/each}}
+ </script>
 <body>
 
 
@@ -63,13 +69,16 @@
           <form id="entries">
             <h1>New Entry</h1>
               <input name="title" type="text" placeholder="title">
-              <input name="jphost" type="text" placeholder="entry">
+              <input name="jpost" type="text" placeholder="entry">
               <input name="entry" type="submit" value="Entry">
               <input class="token" name="token" type="hidden">
               <input class="id" name="id" type="hidden">
           </form>
 
           <div id="myEntries" value="Entry">
+          <input name="entry" type="submit" value="Entry">
+              <input class="token" name="token" type="hidden">
+              <input class="id" name="id" type="hidden">
             <ul class="myEntries">My Entries</ul>
             <li></li>
           </div>

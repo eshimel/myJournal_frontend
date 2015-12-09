@@ -177,7 +177,7 @@ var myJournalAPI = {
     console.log("success");
   },
 
-  list_entries: function (token, callback) {
+  get_entries: function (token, callback) {
     this.ajax({
       method: 'GET',
       url: this.url + '/entries',

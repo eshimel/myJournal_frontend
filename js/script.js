@@ -93,7 +93,22 @@ $(document).ready(function() {
         });
       });
       //Showing entries function
-
+       $("#myEntries").on('click', function(e) {
+        e.preventDefault();
+        $('.myEntries').html('');
+        var token = $('.token').val();
+        var data = [];
+        myJournalAPI.get_entries(token, function(err, data) {
+          if (err) {
+            console.log(err);
+            return;
+          } else {
+            $.each(data.entries, function(index, element) {
+              $('.myEntries').append("<li> Entry: " + element.title + '   ' + "Entry: " + element.jpost +  '         ' + "ID: " + element.id + "</li>");
+          });
+        }
+      });
+    });
       //deleting entry function
 
       //update entry function
