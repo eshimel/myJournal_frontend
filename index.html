@@ -65,7 +65,7 @@
           <h1>MyJournal</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab libero, cupiditate veniam officiis itaque in porro iure fugit iusto reprehenderit commodi earum cum blanditiis quos error similique quod, facere! Hic.</p>
 
-
+          <div>
           <form id="entries">
             <h1>New Entry</h1>
               <input name="title" type="text" placeholder="title">
@@ -74,15 +74,31 @@
               <input class="token" name="token" type="hidden">
               <input class="id" name="id" type="hidden">
           </form>
+            </div>        <!-- DELETE ONE FORM -->
+
+            <div>
+            <form id="deleteone">
+                  <input name="entryid" type="text" placeholder="Insert ID">
+                  <input name="deleteone" type="submit" value="Delete an Entry">
+                  <input class="entryid" name="entryid" type="hidden">
+            </form>
+
+            </div>
+              <div> <form id="update">
+                        <input name="id" type="text" placeholder="Insert ID">
+                        <input name="newfilename" type="text" placeholder="New Title">
+                        <input type="submit" value="Update Entry">
+                    </form></div>
+
 
           <div id="myEntries" value="Entry">
-          <input name="entry" type="submit" value="Entry">
+              <input name="entry" type="submit" value="Entry">
               <input class="token" name="token" type="hidden">
               <input class="id" name="id" type="hidden">
-            <ul class="myEntries">My Entries</ul>
-            <li></li>
+                <ul class="myEntries">My Entries</ul>
+                <li></li>
           </div>
-        </section>
+      </section>
 
         <section class="col-sm-6 col-md-4 col-lg-4">
         <img class="icon" src="images/my_Journal.svg" alt="Icon">
