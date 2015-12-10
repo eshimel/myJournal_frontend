@@ -9,22 +9,16 @@
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Inconsolata:400,700|Exo:400,300italic,500italic,800italic|Architects+Daughter|Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <title>MyJournal</title>
 </head>
-
-  <script id="list_entry" type="x-handolebars-template">
-   {{#each this}}
-     <li class = "myEntries"><a href="/{{Entries}}"> {{title}} -- Entry: {{jpost}}</a></li>
-   {{/each}}
- </script>
 <body>
 
 
-<header class="bgimage">
-  <div class="container">
-  <div class="row">
-    <section class="col-sm-6">
-    <h1>MyJournal</h1>
-    </section>
-    </div>
+  <header class="bgimage">
+   <div class="container">
+   <div class="row">
+       <section class="col-sm-6">
+       <h1>MyJournal</h1>
+       </section>
+  </div>
   </div>
 
 
@@ -33,25 +27,25 @@
 <div class="container">
   <div class="row">
     <section class="col-sm-12">
-  <form id="register">
-      <input name="email" type="text" placeholder="email">
-      <input name="password" type="password" placeholder="password">
-      <input name="password_confirmation" type="password" placeholder="password confirmation">
-      <input name="register" type="submit" value="Register">
+      <form id="register">
+        <input name="email" type="text" placeholder="email">
+        <input name="password" type="password" placeholder="password">
+        <input name="password_confirmation" type="password" placeholder="password confirmation">
+        <input name="register" type="submit" value="Register">
       </form>
-    <form id="login">
-       <input name="email" type="text" placeholder="email">
-       <input name="password" type="password" placeholder="password">
-       <input name="login" type="submit" value="Login">
-       <input class="token" name="token" type="hidden">
-       <input class="id" name="id" type="hidden">
+      <form id="login">
+        <input name="email" type="text" placeholder="email">
+        <input name="password" type="password" placeholder="password">
+        <input name="login" type="submit" value="Login">
+        <input class="token" name="token" type="hidden">
+        <input class="id" name="id" type="hidden">
       </form>
 
-    <form id="logout">
-      <input name="logout" type="submit" value="Logout">
-      <input class="token" name="token" type="hidden">
-       <input class="id" name="id" type="hidden">
-      </form>
+      <form id="logout">
+        <input name="logout" type="submit" value="Logout">
+        <input class="token" name="token" type="hidden">
+        <input class="id" name="id" type="hidden">
+        </form>
     </section>
   </div>
 </div>
@@ -88,17 +82,18 @@
                         <input name="updateid" type="text" placeholder="Insert ID">
                         <input name="title" type="text" placeholder="New Title">
                         <input type="submit" value="Update Entry">
-                    </form></div>
+                    </form>
+              </div>
 
 
-          <div id="myEntries" value="Entry">
-              <input name="entry" type="submit" value="List">
-              <input class="token" name="token" type="hidden">
-              <input class="id" name="id" type="hidden">
+            <div id="myEntries" value="Entry">
+               <input name="entry" type="submit" value="List">
+                <input class="token" name="token" type="hidden">
+                <input class="id" name="id" type="hidden">
                 <ul class="myEntries">My Entries</ul>
                 <li></li>
-          </div>
-      </section>
+            </div>
+        </section>
 
         <section class="col-sm-6 col-md-4 col-lg-4">
         <img class="icon" src="images/my_Journal.svg" alt="Icon">
