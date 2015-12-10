@@ -79,15 +79,15 @@ var myJournalAPI = {
     }, callback);
   },
 
-   change_entry: function (token, id, change_entry, callback) {
+   update_entry: function (token, entryid, update_entry, callback) {
     this.ajax({
       method: 'PATCH',
-      url: this.url + '/entries/' + id,
+      url: this.url + '/entries/' + entryid,
       headers: {
         Authorization: 'Token token=' + token
       },
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(change_entry),
+      data: JSON.stringify(update_entry),
       dataType: 'json'
 
     }, callback);

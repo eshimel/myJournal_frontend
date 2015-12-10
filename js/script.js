@@ -150,6 +150,27 @@ $(document).ready(function() {
 
       // update entry
 
+ $('#update').on('submit', function(e) {
+        e.preventDefault();
+
+        var token = $('.token').val();
+        var updateid = $('#update > input[name="updateid"]').val();
+        var update_entry = wrap('entry', form2object(this));
+        console.log(updateid);
+        console.log(update_entry);
+        myJournalAPI.update_entry(token, updateid,
+          update_entry, function(err, data) {
+          if (err) {
+            console.error(err);
+            // do something with the error
+
+          } else {
+            console.log(data);
+            //$('#deleteone').each(function(){
+            //this.reset();
+          }
+        });
+      });
 
 
 
