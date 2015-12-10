@@ -92,7 +92,7 @@ $(document).ready(function() {
           }
         });
       });
-      //Showing entries function
+      //Listing my entries
        $("#myEntries").on('click', function(e) {
         e.preventDefault();
         $('.myEntries').html('');
@@ -109,7 +109,7 @@ $(document).ready(function() {
         }
       });
     });
-      //deleting entry function
+      //deleting one entry
     $('#deleteone').on('submit', function(e) {
         e.preventDefault();
 

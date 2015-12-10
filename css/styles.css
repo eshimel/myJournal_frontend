@@ -3,15 +3,62 @@
   background-position: center center;
   background-size: cover;
   background-color : 90c3d4;
-  height: 200px;
+  height: 220px;
 
 
+}
+
+
+
+body {
+  font-family: 'Exo', sans-serif;
 }
 h1 {
   font-family: 'Architects Daughter', cursive;
   font-size: 3em;
 }
+#entries {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#deleteone {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+#update {
+  padding-top: 20px;
+
+}
+
+#myEntries {
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+}
+.myEntries {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3em;
+}
+
+input {
+  border-radius: 5px;
+  background-color: #F5DCAE;
+
+  color: #262625;
+
+
+}
+
+input[type=submit] {
+  background-color: #E8B9B3;
+}
+
+p {
+  font-family: 'Exo', sans-serif;
+  font-size: 1em;
+
+}
 /*font-family: 'Indie Flower', cursive;
 font-family: 'Inconsolata', ;
 font-family: 'Exo', sans-serif;
