@@ -18,4 +18,14 @@ As a user, I need to see past entries, so that I can review what I wrote.
 
 As a user, I need to update titles, so that I can make my personal narrative sound more awesome.
 
+
 As a user, I need to delete entries, so that I can have the satisfaction that mirrors ripping pages out of a paper  journal.
+
+
+## Issues/Next Steps to work on:
+Work on making the rate my feature work.
+
+This is the second project that I created for the project 2 prompt.  StorWe, my first project 2 proved to be more complicated than I was ready to take on earlier in the program, so this project is like a clean start.  
+
+
+link to back-end repo  https://github.com/eshimel/myJournal
