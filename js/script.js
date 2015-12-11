@@ -31,6 +31,23 @@ $(document).ready(function() {
 
       $.ajax
 
+      //hides list button onload/shows it on login
+
+
+
+
+
+
+$(function(){
+    $("#div2").hide();
+    $("#preview").on("click", function(){
+        $("#div1, #div2").toggle();
+    });
+});
+
+
+
+
       $('#register').on('submit', function(e) {
         e.preventDefault();
         var credentials = wrap('credentials', form2object(this));
@@ -50,6 +67,7 @@ $(document).ready(function() {
           console.log(data.user.token);
           $('#login').each(function(){
             this.reset();
+
           });
 
         };
@@ -76,7 +94,6 @@ $(document).ready(function() {
       // Submitting new entries function
       $('#entries').on('submit', function(e) {
         e.preventDefault();
-
         var token = $('.token').val();
         var new_entry = wrap('entry', form2object(this));
         myJournalAPI.new_entry(token, new_entry, function(err, entryData) {
