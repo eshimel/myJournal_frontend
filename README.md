@@ -21,10 +21,19 @@ As a user, I need to update titles, so that I can make my personal narrative sou
 
 As a user, I need to delete entries, so that I can have the satisfaction that mirrors ripping pages out of a paper  journal.
 
+#Wireframes and Supporting Images
+
+##Why I think making a "small' app is useful!  Note the awesome size of the console.
 <img width="1254" alt="screen shot 2015-12-11 at 1 42 58 pm" src="https://cloud.githubusercontent.com/assets/14185415/11752377/43379790-a00d-11e5-8972-a9dd76c04476.png">
+
+##Wireframes
 ![phone template](https://cloud.githubusercontent.com/assets/14185415/11752382/4acd45fe-a00d-11e5-8602-d1b7d66430c8.jpg)
+
 ![phone template2](https://cloud.githubusercontent.com/assets/14185415/11752385/52b3cac2-a00d-11e5-834d-240a1e1aad43.jpg)
+
 ## Issues/Next Steps to work on:
+
+The list button lists all entries when not logged in...its an issue with the open_read controller that needs to be addressed, however, the list button after logging in works the way that it should...it lists the current users entries.
 Work on making the rate my feature work.
 
 This is the second project that I created for the project 2 prompt.  StorWe, my first project 2 proved to be more complicated than I was ready to take on earlier in the program, so this project is like a clean start.  
