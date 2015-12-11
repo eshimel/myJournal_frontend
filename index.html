@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Inconsolata:400,700|Exo:400,300italic,500italic,800italic|Architects+Daughter|Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <title>MyJournal</title>
+</head>
+<body>
+
+
+  <header class="bgimage">
+   <div class="container">
+   <div class="row">
+       <section class="col-sm-6">
+       <h1>MyJournal</h1>
+       </section>
+  </div>
+  </div>
+
+
+</header>
+
+<div class="container">
+  <div class="row">
+    <section class="col-sm-12">
+      <form id="register">
+        <input name="email" type="text" placeholder="email">
+        <input name="password" type="password" placeholder="password">
+        <input name="password_confirmation" type="password" placeholder="password confirmation">
+        <input name="register" type="submit" value="Register">
+      </form>
+      <form id="login">
+        <input name="email" type="text" placeholder="email">
+        <input name="password" type="password" placeholder="password">
+        <input name="login" type="submit" value="Login">
+        <input class="token" name="token" type="hidden">
+        <input class="id" name="id" type="hidden">
+      </form>
+
+      <form id="logout">
+        <input name="logout" type="submit" value="Logout">
+        <input class="token" name="token" type="hidden">
+        <input class="id" name="id" type="hidden">
+        </form>
+    </section>
+  </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <section class="col-sm-6 col-md-8 col-lg-8">
+
+          <h1>MyJournal</h1>
+          <p>Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can  pull up a list of all of your entries, delete previous entries, and rename an entry, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It's like a paper journal, you'll just have to "rip out the page" by deleting it.</p>
+
+          <div>
+          <form id="entries">
+            <h1>New Entry</h1>
+              <input name="title" type="text" placeholder="title">
+              <input name="jpost" type="text" style="width:350px; height:250px"placeholder="entry">
+              <input name="entry" type="submit" value="Entry">
+              <input class="token" name="token" type="hidden">
+              <input class="id" name="id" type="hidden">
+          </form>
+            </div>        <!-- DELETE ONE FORM -->
+
+            <div>
+            <form id="deleteone">
+                  <input name="entryid" type="text" placeholder="Insert ID">
+                  <input name="deleteone" type="submit" value="Delete an Entry">
+                  <input class="entryid" name="entryid" type="hidden">
+            </form>
+
+            </div>
+              <div> <form id="update">
+                        <input name="updateid" type="text" placeholder="Insert ID">
+                        <input name="title" type="text" placeholder="New Title">
+                        <input type="submit" value="Update Entry">
+                    </form>
+              </div>
+
+
+            <div id="myEntries" value="Entry">
+               <input name="entry" type="submit" value="List">
+                <input class="token" name="token" type="hidden">
+                <input class="id" name="id" type="hidden">
+                <ul class="myEntries">My Entries</ul>
+                <li></li>
+            </div>
+        </section>
+
+        <section class="col-sm-6 col-md-4 col-lg-4">
+        <img class="icon" src="images/my_Journal.svg" alt="Icon">
+          <h1>How has your day been?</h1>
+           <form id="quick_post">
+              <input name="One_to_Ten" type="text" value="One_to_Ten">
+              <input name="Rate" type="submit" value="Quick_post">
+             <input class="token" name="token" type="hidden">
+             <input class="id" name="id" type="hidden">
+            </form>
+          <p>This section is a future feature of this application.  You'll be able to make a quick note of how your day is going on a scale of 1-10.  Each rating gets saved with the date and time, so you can keep track of these types of patterns.</p>
+        </section>
+  </div>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/api.js"></script>
+</body>
+</html>
+
+
