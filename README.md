@@ -21,6 +21,11 @@ As a user, I need to update titles, so that I can make my personal narrative sou
 
 As a user, I need to delete entries, so that I can have the satisfaction that mirrors ripping pages out of a paper  journal.
 
+Next Phase User Stories
+
+As a user, I can rate my day, so that I can track how I'm feeling.
+
+As a user, I can look up past rates, so that I refer to past days.
 #Wireframes and Supporting Images
 
 ##Why "small" apps are awesome!
