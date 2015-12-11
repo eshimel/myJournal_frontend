@@ -46,3 +46,4 @@ This is the second project that I created for the project 2 prompt.  StorWe, my 
 
 
 link to back-end repo  https://github.com/eshimel/myJournal
+link to heroku hosted backend;  https://immense-inlet-5495.herokuapp.com
