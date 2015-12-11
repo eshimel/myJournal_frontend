@@ -2,7 +2,7 @@
 #MyJournal The App
 
 ##Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can  pull up a list of all of your entries, delete previous entries, and rename an entry, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It’s like a paper journal, you'll just have to "rip out the page" by deleting it.  A future feature will be the “rate my day” quick post, that gives users the option to give a quick 1-10 rating of how they feel their day is going.
-This app was inspired by an area art therapy organization’s daily check-in/check-out protocols that I spent the last year prior to becoming a developer working with.
+This app was inspired by an area art therapy organization’s daily check-in/check-out protocols.  I spent the last year prior to becoming a developer working with this after school program, as well as others on the north shore.
 
 #User Stories
 
