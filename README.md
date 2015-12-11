@@ -23,8 +23,9 @@ As a user, I need to delete entries, so that I can have the satisfaction that mi
 
 #Wireframes and Supporting Images
 
-##Why I think making a "small' app is useful!  Note the awesome size of the console.
-<img width="1254" alt="screen shot 2015-12-11 at 1 42 58 pm" src="https://cloud.githubusercontent.com/assets/14185415/11752377/43379790-a00d-11e5-8972-a9dd76c04476.png">
+##Why "small" apps are awesome!
+![littleapp](https://cloud.githubusercontent.com/assets/14185415/11752623/a2c56de4-a00e-11e5-811f-2f33454f55f3.jpg)
+
 
 ##Wireframes
 ![phone template](https://cloud.githubusercontent.com/assets/14185415/11752382/4acd45fe-a00d-11e5-8602-d1b7d66430c8.jpg)
