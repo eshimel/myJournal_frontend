@@ -2,7 +2,7 @@
 
 
 var myJournalAPI = {
-  url: 'https://immense-inlet-5495.herokuapp.com/',
+  url: 'https://immense-inlet-5495.herokuapp.com',
 
 
   ajax: function (config, cb) {
