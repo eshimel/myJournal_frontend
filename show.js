@@ -16,3 +16,9 @@
           }
         });
       });
+
+
+ <li>
+                <span class="list">{{title}}</span>
+                <input class="listInput" type="text" value="{{title}}" data-id="{{id}}" data-field="title" />
+            </li>

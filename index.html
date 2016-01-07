@@ -9,6 +9,10 @@
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Inconsolata:400,700|Exo:400,300italic,500italic,800italic|Architects+Daughter|Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/animate.css">
   <title>MyJournal</title>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/handlebars.js"></script>
+
+
 </head>
 <body>
 
@@ -115,10 +119,14 @@
               </div>
                </div>
                </div>
+            </section>
+    <div class="container">
+    <div class="row">
+      <section class="col-sm-12 col-md-12 col-lg-12">
                <div id="list">
                <div class="slideInUp">
                 <div id="myEntries" value="Entry">
-                <input name="entry" type="submit" value="List">
+                <input name="entry" type="submit" value="Show Entries">
                 <input class="token" name="token" type="hidden">
                 <input class="id" name="id" type="hidden">
                 <ul style="list-style-image: url( 'images/my_journal.svg' ); text-align: left; "
@@ -133,7 +141,7 @@
   </div>
 </div>
 
-<script src="js/jquery-2.1.4.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/api.js"></script>

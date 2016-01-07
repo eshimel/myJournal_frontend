@@ -5,9 +5,11 @@ var id;
 
 $(document).ready(function() {
 
-        $("#login").show(2000);
-        $("#register").show(2000);
-      var form2object = function(form) {
+
+
+    $("#login").show(2000);
+    $("#register").show(2000);
+    var form2object = function(form) {
         var data = {};
         $(form).find('input').each(function(index, element) {
           var type = $(this).attr('type');
@@ -34,19 +36,13 @@ $(document).ready(function() {
 
       $.ajax
 
-      //hides list button onload/shows it on login
 
 
 
 
 
 
-$(function(){
 
-    $("#preview").on("click", function(){
-        $("#div1, #div2").toggle();
-    });
-});
 
 
 
@@ -137,8 +133,15 @@ $(function(){
               $('.myEntries').append("<li> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> " + element.title + ' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "Rating: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
           });
         }
+
       });
-    });
+
+});
+
+
+
+//making list editable
+
       //deleting one entry
     $('#deleteone').on('submit', function(e) {
         e.preventDefault();
@@ -200,7 +203,7 @@ $(function(){
             //this.reset();
           }
         });
-      });
+     });
 
 
 
