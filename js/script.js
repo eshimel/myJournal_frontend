@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 
 $(function(){
-    $("#div2").hide();
+
     $("#preview").on("click", function(){
         $("#div1, #div2").toggle();
     });
@@ -52,6 +52,7 @@ $(function(){
         e.preventDefault();
         var credentials = wrap('credentials', form2object(this));
         myJournalAPI.register(credentials, callback);
+        $("#register").hide();
       });
 
       $('#login').on('submit', function(e) {
@@ -67,6 +68,10 @@ $(function(){
           console.log(data.user.token);
           $('#login').each(function(){
             this.reset();
+            $("#login").hide();
+            $("#register").hide();
+            $(".lightSpeedIn").show();
+            $("#myEntries").show();
 
           });
 
@@ -107,6 +112,7 @@ $(function(){
           });
             console.log(entryData);
           }
+          $('#entries').hide();
         });
       });
       //Listing my entries
