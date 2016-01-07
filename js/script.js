@@ -70,8 +70,8 @@ $(function(){
             this.reset();
             $("#login").hide();
             $("#register").hide();
-            $(".lightSpeedIn").show();
-            $("#myEntries").show();
+            $(".lightSpeedIn").show().delay(2000);
+            $("#myEntries").show().delay(2000);
 
           });
 
@@ -112,7 +112,7 @@ $(function(){
           });
             console.log(entryData);
           }
-          $('#entries').hide();
+
         });
       });
       //Listing my entries

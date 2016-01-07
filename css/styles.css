@@ -6,6 +6,7 @@
   height: 200px;
 
 
+
 }
 
 
@@ -21,6 +22,8 @@ h1 {
 #entries {
   padding-top: 10px;
   padding-bottom: 10px;
+  border-top-style: solid;
+ border-top-color: #F5DCAE;
 }
 #deleteone {
   padding-top: 10px;
