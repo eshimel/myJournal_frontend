@@ -3,7 +3,7 @@
   background-position: center center;
   background-size: cover;
   background-color : 90c3d4;
-  height: 220px;
+  height: 200px;
 
 
 }
@@ -12,6 +12,7 @@
 
 body {
   font-family: 'Exo', sans-serif;
+
 }
 h1 {
   font-family: 'Architects Daughter', cursive;
@@ -32,13 +33,35 @@ h1 {
 }
 
 #myEntries {
-  padding-top: 20px;
-  padding-bottom: 10px;
 
+  padding-top: 50px;
+  padding-bottom: 10px;
+ padding-left: 80px;
+}
+
+#list {
+   background-image: url('../images/Lined-Paper-Template-19-1024x1325.jpg');
+  background-image-opacity: 0.4;
+  border-radius: 5px;
 }
 .myEntries {
   font-family: 'Indie Flower', cursive;
   font-size: 3em;
+
+}
+
+#about {
+   background-image: url('../images/Printable-Notebook-Paper-05.jpg');
+}
+#text {
+  font-family: 'Exo', sans-serif;
+   font-size: 1.55em;
+   padding: 20px;
+   padding-left: 50px;
+}
+#forms {
+
+  border-radius: 5px;
 }
 
 input {
@@ -46,9 +69,11 @@ input {
   background-color: #F5DCAE;
 
   color: #262625;
-
-
 }
+
+
+
+
 
 input[type=submit] {
   background-color: #E8B9B3;

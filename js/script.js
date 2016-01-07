@@ -121,7 +121,7 @@ $(function(){
             return;
           } else {
             $.each(data.entries, function(index, element) {
-              $('.myEntries').append("<li> Entry: " + element.title + '   ' + "Entry: " + element.jpost +  '         ' + "ID: " + element.id + "</li>");
+              $('.myEntries').append("<li> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> " + element.title + ' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "Rating: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
           });
         }
       });
