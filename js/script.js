@@ -4,6 +4,9 @@ var token;
 var id;
 
 $(document).ready(function() {
+
+        $("#login").show(2000);
+        $("#register").show(2000);
       var form2object = function(form) {
         var data = {};
         $(form).find('input').each(function(index, element) {
@@ -68,10 +71,13 @@ $(function(){
           console.log(data.user.token);
           $('#login').each(function(){
             this.reset();
-            $("#login").hide();
-            $("#register").hide();
-            $(".lightSpeedIn").show().delay(2000);
-            $("#myEntries").show().delay(2000);
+            $("#login").hide(1000);
+            $("#register").hide(1000);
+            $("#aboutsm").show();
+            $("#textsm").show();
+            $(".fadeInDown").hide();
+            $(".lightSpeedIn").show();
+            $("#myEntries").show(1000);
 
           });
 
@@ -92,6 +98,7 @@ $(function(){
         };
         myJournalAPI.logout(token, id, cb
           );
+
       });
 
 

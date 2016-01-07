@@ -19,6 +19,13 @@ h1 {
   font-family: 'Architects Daughter', cursive;
   font-size: 3em;
 }
+
+#register {
+  display: none;
+}
+#login {
+  display: none;
+}
 #entries {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -55,14 +62,28 @@ h1 {
 
 #about {
    background-image: url('../images/Printable-Notebook-Paper-05.jpg');
+
 }
 #text {
   font-family: 'Exo', sans-serif;
    font-size: 1.55em;
    padding: 20px;
    padding-left: 50px;
-}
 
+}
+#aboutsm {
+   background-image: url('../images/Printable-Notebook-Paper-05.jpg');
+   display: none;
+
+}
+#textsm {
+  font-family: 'Exo', sans-serif;
+   font-size: 1em;
+   padding: 20px;
+   padding-left: 20px;
+   display: none;
+
+}
 
 input {
   border-radius: 5px;
