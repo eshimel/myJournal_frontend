@@ -130,18 +130,52 @@ $(document).ready(function() {
             return;
           } else {
             $.each(data.entries, function(index, element) {
-              $('.myEntries').append("<li> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> " + element.title + ' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "Rating: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
+              $('.myEntries').append("<li class='entryid'> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> <span class='title' contentEditable ='true' input='edit' value='change title'>" + element.title + '</span>'+' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "Rating: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
+
           });
         }
+$(function() {
+  $("ul.myEntries").each(function() {
+
+    $("li:gt(4)", this).hide(); /* :gt() is zero-indexed */
+    $("li:nth-child(5)", this).after("<li class='more'><a href='#'>More...</a></li>"); /* :nth-child() is one-indexed */
+  });
+  $("li.myEntries a").live("click", function() {
+    var li = $(this).parents("li:first");
+    li.parent().children().show();
+    li.hide();
+    return false;
+
+
+  });
+
+
+});
 
       });
 
 });
 
 
-
 //making list editable
+$(".display").click(function(){
+    $(this).hide().siblings(".edit").show().val($(this).text()).focus();
+});
+$(".edit").focusout(function(){
+    $(this).hide().siblings(".display").show().text($(this).val());
+});
+/*$(function() {
+ 'use strict';
+ $('#lists').on('click', function(e) {
+   $(this).children('.selected').removeClass('selected');
+   $(e.target).addClass('selected');
+ });
 
+ $('#list-action').on('click', function(e) {
+   var listId = $('#lists > .selected').data('');
+   alert(' ' + listId);
+ });
+});*/
       //deleting one entry
     $('#deleteone').on('submit', function(e) {
         e.preventDefault();
@@ -162,24 +196,7 @@ $(document).ready(function() {
         });
       });
 
-      //  Submitting new quick_post function
 
-      $('#quick_post').on('submit', function(e) {
-        e.preventDefault();
-        var token = $('.token').val();
-        var new_quick_post = wrap('quick_post', form2object(this));
-        myJournalAPI.new_quick_post(token, new_quick_post, function(err, quick_postData) {
-          if (err) {
-            // do something with the error
-            return;
-          } else {
-            $('#quick_post').each(function(){
-            this.reset();
-          });
-            console.log(quick_postData);
-          }
-        });
-      });
 
       // update entry
 
