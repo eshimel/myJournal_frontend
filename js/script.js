@@ -130,10 +130,14 @@ $(document).ready(function() {
             return;
           } else {
             $.each(data.entries, function(index, element) {
-              $('.myEntries').append("<li class='entryid'> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> <span class='title' contentEditable ='true' input='edit' value='change title'>" + element.title + '</span>'+' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "Rating: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
+              $('.myEntries').append("<li class='entryid'> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> <span class='title'>"  + element.title + '</span>' +' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "My Day is a: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
 
           });
-        }
+
+
+}
+
+
 $(function() {
   $("ul.myEntries").each(function() {
 
@@ -145,34 +149,28 @@ $(function() {
     li.parent().children().show();
     li.hide();
     return false;
-
-
-  });
+    });
 
 
 });
 
       });
 
+
 });
 
 
 //making list editable
-$(".display").click(function(){
-    $(this).hide().siblings(".edit").show().val($(this).text()).focus();
-});
-$(".edit").focusout(function(){
-    $(this).hide().siblings(".display").show().text($(this).val());
-});
+
 /*$(function() {
- 'use strict';
+
  $('#lists').on('click', function(e) {
-   $(this).children('.selected').removeClass('selected');
-   $(e.target).addClass('selected');
+   $(this).children('.title').removeClass('title');
+   $(e.target).addClass('title');
  });
 
  $('#list-action').on('click', function(e) {
-   var listId = $('#lists > .selected').data('');
+   var listId = $('#list > .title').data('');
    alert(' ' + listId);
  });
 });*/
