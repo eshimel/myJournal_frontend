@@ -24,7 +24,7 @@ $(document).ready(function() {
         wrapper[root] = formData;
         return wrapper;
       };
-      var callback = function callback(error, data) {
+    var callback = function callback(error, data) {
         if (error) {
         console.error(error);
         $('#result').val('status: ' + error.status + ', error: ' + error.error);
@@ -97,6 +97,8 @@ $(document).ready(function() {
           } else {
             $('#entries').each(function(){
             this.reset();
+            $('#deleteone').show(1000);
+            $('#update').show(1000);
 
           });
             console.log(entryData);

@@ -28,11 +28,13 @@ h1 {
  border-top-color: #F5DCAE;
 }
 #deleteone {
+  display: none;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 #update {
+  display: none;
   padding-top: 20px;
   padding-bottom: 20px;
 }
