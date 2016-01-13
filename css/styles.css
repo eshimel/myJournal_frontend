@@ -87,7 +87,10 @@ input {
   color: #262625;
 }
 
-
+input[type=number] {
+  font-family: 'Exo', sans-serif;
+   font-size: 1.55em;
+}
 
 
 

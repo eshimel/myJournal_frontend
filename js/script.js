@@ -116,7 +116,7 @@ $(document).ready(function() {
             return;
           } else {
             $.each(data.entries, function(index, element) {
-              $('.myEntries').append("<li class='entryid'> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> <span class='title'>"  + element.title + '</span>' +' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "My Day is a: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
+              $('.myEntries').append("<li class='entryid'> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> <span class='title'>"  + element.title + '</span>' +' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "<b>MY DAY IS A: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
 
               });
             }

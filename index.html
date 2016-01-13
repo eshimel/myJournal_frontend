@@ -70,7 +70,7 @@
           <div id="aboutsm">
           <div id="textsm">
           <h2>MyJournal</h2>
-          <p>Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can  pull up a list of all of your entries, delete previous entries, and rename an entry, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It's like a paper journal, you'll just have to "rip out the page" by deleting it.</p>
+          <p>Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can pull up a list of all of your entries, delete previous entries, and rename an entry title, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It's like a paper journal, you'll just have to "rip out the page" by deleting it.</p>
           </div>
           </div>
           </div>
@@ -79,29 +79,39 @@
     <section class="col-sm-12 col-md-8 col-lg-8">
           <div class="lightSpeedIn">
           <div class="animated lightSpeedIn">
-          <!--CREATE A NEW ENTRY FORM-->
 
+         <!--CREATE A NEW ENTRY FORM-->
           <div>
-          <form id="entries">
-            <h1>New Entry</h1>
-            <h2>Today's Date</h2>
-              <input name="date" type="date" placeholder="date">
-            <h2>Rate Your Day</h2>
-            <h3>On a scale of 0-10, rate how your day is going. 0 is the worst, 10 is the best.</h3>
-              <input name="rating" type="number" min="0" step="1" max="10" style="width:100px; height:100px;"placeholder="rate my day">
-            <h3>Title</h3>
-              <input name="title" type="text" placeholder="title">
-            <h3>What's going on?</h3>
-              <input name="jpost" type="text" style="width:450px; height:250px"placeholder="entry"><br>
-
-              <input name="entry" type="submit" value="Entry">
-              <input class="token" name="token" type="hidden">
-              <input class="id" name="id" type="hidden">
-          </form>
+            <form id="entries">
+              <h1>New Entry</h1>
+              <h2>Today's Date</h2>
+                <input name="date" type="date" placeholder="date">
+              <h2>Rate Your Day</h2>
+              <h3>On a scale of 0-10, rate how your day is going. 0 is the worst, 10 is the best.</h3>
+               <input name="rating" type="number" min="0" step="1" max="10" style="width:100px; height:100px;"placeholder="rate my day">
+              <h3>Title</h3>
+               <input name="title" type="text" placeholder="title">
+              <h3>What's going on?</h3>
+                <input name="jpost" type="text" style="width:450px; height:250px"placeholder="entry"><br>
+                <input name="entry" type="submit" value="Save">
+                <input class="token" name="token" type="hidden">
+                <input class="id" name="id" type="hidden">
+            </form>
         </div>
-        <!-- DELETE ONE FORM -->
 
-         <div>
+      </div>
+      </div>
+    </section>
+
+      <!-- SHOW LIST SECTION -->
+    <div class="container">
+    <div class="row">
+      <section class="col-sm-12 col-md-12 col-lg-12">
+          <div id="list">
+          <div class="slideInUp">
+             <!-- DELETE ONE FORM -->
+
+            <div>
             <form id="deleteone">
                   <input name="entryid" type="text" placeholder="Insert ID">
                   <input name="deleteone" type="submit" value="Delete an Entry">
@@ -117,16 +127,6 @@
                   <input type="submit" value="Update Entry">
               </form>
           </div>
-      </div>
-      </div>
-    </section>
-
-      <!-- SHOW LIST SECTION -->
-    <div class="container">
-    <div class="row">
-      <section class="col-sm-12 col-md-12 col-lg-12">
-          <div id="list">
-          <div class="slideInUp">
             <div id="myEntries" value="Entry">
               <input name="entry" type="submit" value="Show Entries">
               <input class="token" name="token" type="hidden">
