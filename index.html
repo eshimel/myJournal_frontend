@@ -14,65 +14,60 @@
 
 
 </head>
-<body>
-
-
+  <body>
   <header class="bgimage">
-   <div class="container">
-   <div class="row">
-       <section class="col-sm-6">
-       <h1>MyJournal</h1>
-       </section>
-  </div>
-  </div>
-
-
-</header>
-
-<div class="container">
-  <div class="row">
-   <section class="col-sm-12 col-md-12 col-lg-12">
-          <div class=" animated fadeInDown">
-           <div id="about">
-          <div id="text">
+      <div class="container">
+        <div class="row">
+        <section class="col-sm-6">
           <h1>MyJournal</h1>
-          <p>Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can  pull up a list of all of your entries, delete previous entries, and rename an entry, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It's like a paper journal, you'll just have to "rip out the page" by deleting it.</p>
+        </section>
+      </div>
+    </div>
+  </header>
+
+    <div class="container">
+      <div class="row">
+        <section class="col-sm-12 col-md-12 col-lg-12">
+          <div class=" animated fadeInDown">
+            <div id="about">
+            <div id="text">
+              <h1>MyJournal</h1>
+              <p>Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can  pull up a list of all of your entries, delete previous entries, and rename an entry, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It's like a paper journal, you'll just have to "rip out the page" by deleting it.</p>
           </div>
-          </div>
-          </div>
-    </section>
+         </div>
+        </div>
+      </section>
+          <!--REGISTRATION/LOGIN/LOGOUT FORMS-->
 
       <section class="col-sm-12">
-       <form id="register">
-        <input name="email" type="email" placeholder="email" required>
-        <input name="password" type="password" placeholder="password" required>
-        <input name="password_confirmation" type="password" placeholder="password confirmation" required>
-        <input name="register" type="submit" value="Register">
+        <form id="register">
+          <input name="email" type="email" placeholder="email" required>
+         <input name="password" type="password" placeholder="password" required>
+          <input name="password_confirmation" type="password" placeholder="password confirmation" required>
+          <input name="register" type="submit" value="Register">
         </form>
-        <form id="login">
-        <input name="email" type="email" placeholder="email" required>
-        <input name="password" type="password" placeholder="password" required>
-        <input name="login" type="submit" value="Login">
-        <input class="token" name="token" type="hidden">
-        <input class="id" name="id" type="hidden">
-      </form>
+          <form id="login">
+          <input name="email" type="email" placeholder="email" required>
+          <input name="password" type="password" placeholder="password" required>
+          <input name="login" type="submit" value="Login">
+          <input class="token" name="token" type="hidden">
+          <input class="id" name="id" type="hidden">
+        </form>
 
-        <form id="logout">
-        <input name="logout" type="submit" value="Logout">
-        <input class="token" name="token" type="hidden">
-        <input class="id" name="id" type="hidden">
-      </form>
-    </section>
-  </div>
-</div>
+          <form id="logout">
+          <input name="logout" type="submit" value="Logout">
+          <input class="token" name="token" type="hidden">
+          <input class="id" name="id" type="hidden">
+        </form>
+      </section>
+    </div>
+    </div>
 
-
-
-<div class="container">
+    <div class="container">
     <div class="row">
       <section class="col-sm-12 col-md-4 col-lg-4">
           <div class="lightSpeedIn">
-           <div id="aboutsm">
+          <div id="aboutsm">
           <div id="textsm">
           <h2>MyJournal</h2>
           <p>Use MyJournal as a tool to keep a personal account of the what's happening in your life.  You can  pull up a list of all of your entries, delete previous entries, and rename an entry, if your writing goes in a different direction than when you first started your post.  Sorry, no going back in and editing a post.  It's like a paper journal, you'll just have to "rip out the page" by deleting it.</p>
@@ -81,9 +76,11 @@
           </div>
     </section>
 
-        <section class="col-sm-12 col-md-8 col-lg-8">
+    <section class="col-sm-12 col-md-8 col-lg-8">
           <div class="lightSpeedIn">
-           <div class="animated lightSpeedIn">
+          <div class="animated lightSpeedIn">
+          <!--CREATE A NEW ENTRY FORM-->
+
           <div>
           <form id="entries">
             <h1>New Entry</h1>
@@ -92,61 +89,58 @@
             <h2>Rate Your Day</h2>
             <h3>On a scale of 0-10, rate how your day is going. 0 is the worst, 10 is the best.</h3>
               <input name="rating" type="number" min="0" step="1" max="10" style="width:100px; height:100px;"placeholder="rate my day">
-              <h3>Title</h3>
+            <h3>Title</h3>
               <input name="title" type="text" placeholder="title">
-              <h3>What's going on?</h3>
+            <h3>What's going on?</h3>
               <input name="jpost" type="text" style="width:450px; height:250px"placeholder="entry"><br>
 
               <input name="entry" type="submit" value="Entry">
               <input class="token" name="token" type="hidden">
               <input class="id" name="id" type="hidden">
           </form>
-            </div>        <!-- DELETE ONE FORM -->
+        </div>
+        <!-- DELETE ONE FORM -->
 
-            <div>
+         <div>
             <form id="deleteone">
                   <input name="entryid" type="text" placeholder="Insert ID">
                   <input name="deleteone" type="submit" value="Delete an Entry">
                   <input class="entryid" name="entryid" type="hidden">
             </form>
+         </div>
+         <!-- UPDATE ONE FORM -->
 
-            </div>
-              <div> <form id="update">
-                        <input name="updateid" type="text" placeholder="Insert ID">
-                        <input name="title" type="text" placeholder="New Title">
-                        <input type="submit" value="Update Entry">
-                    </form>
-              </div>
-               </div>
-               </div>
-            </section>
+          <div>
+              <form id="update">
+                  <input name="updateid" type="text" placeholder="Insert ID">
+                  <input name="title" type="text" placeholder="New Title">
+                  <input type="submit" value="Update Entry">
+              </form>
+          </div>
+      </div>
+      </div>
+    </section>
+
+      <!-- SHOW LIST SECTION -->
     <div class="container">
     <div class="row">
       <section class="col-sm-12 col-md-12 col-lg-12">
-               <div id="list">
-               <div class="slideInUp">
-                <div id="myEntries" value="Entry">
-                <input name="entry" type="submit" value="Show Entries">
-                <input class="token" name="token" type="hidden">
-                <input class="id" name="id" type="hidden">
-
-
+          <div id="list">
+          <div class="slideInUp">
+            <div id="myEntries" value="Entry">
+              <input name="entry" type="submit" value="Show Entries">
+              <input class="token" name="token" type="hidden">
+              <input class="id" name="id" type="hidden">
                 <ul id="lists" style="list-style-image: url( 'images/my_journal.svg' ); text-align: left; "
                  class="myEntries">
-                 <li>
-
-        </li>
-
-                 </ul>
-
-                </div>
-              </div>
-              </div>
-
-
-        </section>
+                  <li></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      </section>
   </div>
-</div>
+  </div>
 
 
 <script src="js/bootstrap.min.js"></script>

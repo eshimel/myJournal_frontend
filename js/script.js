@@ -4,47 +4,34 @@ var token;
 var id;
 
 $(document).ready(function() {
+  //fade in of forms
+  $("#login").show(2000);
+  $("#register").show(2000);
 
-
-
-    $("#login").show(2000);
-    $("#register").show(2000);
-    var form2object = function(form) {
-        var data = {};
-        $(form).find('input').each(function(index, element) {
-          var type = $(this).attr('type');
-          if ($(this).attr('name') && type !== 'submit' && type !=='hidden') {
-            data[$(this).attr('name')] = $(this).val();
+  //translate form data to json and back to html
+  var form2object = function(form) {
+      var data = {};
+      $(form).find('input').each(function(index, element) {
+        var type = $(this).attr('type');
+        if ($(this).attr('name') && type !== 'submit' && type !=='hidden') {
+          data[$(this).attr('name')] = $(this).val();
           }
         });
         return data;
       };
-      var wrap = function wrap(root, formData) {
+    var wrap = function wrap(root, formData) {
         var wrapper = {};
         wrapper[root] = formData;
         return wrapper;
       };
-
       var callback = function callback(error, data) {
         if (error) {
-          console.error(error);
-          $('#result').val('status: ' + error.status + ', error: ' + error.error);
-          return;
+        console.error(error);
+        $('#result').val('status: ' + error.status + ', error: ' + error.error);
+        return;
         }
         $('#result').val(JSON.stringify(data, null, 4));
-      };
-
-      $.ajax
-
-
-
-
-
-
-
-
-
-
+        };
 
 
       $('#register').on('submit', function(e) {
@@ -67,6 +54,7 @@ $(document).ready(function() {
           console.log(data.user.token);
           $('#login').each(function(){
             this.reset();
+            //  Makes forms go away/restructures page
             $("#login").hide(1000);
             $("#register").hide(1000);
             $("#aboutsm").show();
@@ -96,8 +84,6 @@ $(document).ready(function() {
           );
 
       });
-
-
 
       // Submitting new entries function
       $('#entries').on('submit', function(e) {
@@ -132,48 +118,25 @@ $(document).ready(function() {
             $.each(data.entries, function(index, element) {
               $('.myEntries').append("<li class='entryid'> <b>Date:</b> " + element.date + ' <br>  ' + "<b>Title:</b> <span class='title'>"  + element.title + '</span>' +' <br>  ' + "<b>Entry: </b>" + element.jpost +  '    <br>     ' + "My Day is a: " + element.rating +  '    <br>     ' + "ID: " + element.id + "</li>");
 
+              });
+            }
+        //Limits list to first five entries
+          $(function() {
+          $("ul.myEntries").each(function() {
+            $("li:gt(4)", this).hide(); /* :gt() is zero-indexed */
+            $("li:nth-child(5)", this).after("<li class='more'><a href='#'>More...</a></li>"); /* :nth-child() is one-indexed */
           });
+          $("li.myEntries a").live("click", function() {
+            var li = $(this).parents("li:first");
+            li.parent().children().show();
+            li.hide();
+            return false;
+          });
+        });
+    });  //myJournalAPI.get_entries function
+  }); //$(#myEntries) function
 
 
-}
-
-
-$(function() {
-  $("ul.myEntries").each(function() {
-
-    $("li:gt(4)", this).hide(); /* :gt() is zero-indexed */
-    $("li:nth-child(5)", this).after("<li class='more'><a href='#'>More...</a></li>"); /* :nth-child() is one-indexed */
-  });
-  $("li.myEntries a").live("click", function() {
-    var li = $(this).parents("li:first");
-    li.parent().children().show();
-    li.hide();
-    return false;
-    });
-
-
-});
-
-      });
-
-
-});
-
-
-//making list editable
-
-/*$(function() {
-
- $('#lists').on('click', function(e) {
-   $(this).children('.title').removeClass('title');
-   $(e.target).addClass('title');
- });
-
- $('#list-action').on('click', function(e) {
-   var listId = $('#list > .title').data('');
-   alert(' ' + listId);
- });
-});*/
       //deleting one entry
     $('#deleteone').on('submit', function(e) {
         e.preventDefault();
@@ -193,8 +156,6 @@ $(function() {
           }
         });
       });
-
-
 
       // update entry
 
@@ -219,10 +180,6 @@ $(function() {
           }
         });
      });
-
-
-
-
 });
 
 

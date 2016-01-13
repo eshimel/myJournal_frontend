@@ -1,9 +1,9 @@
 'use strict';
-
+//Ajax Calls
 
 var myJournalAPI = {
-  //url: 'https://immense-inlet-5495.herokuapp.com',
-url: 'http://localhost:3000',
+  url: 'https://immense-inlet-5495.herokuapp.com',
+//url: 'http://localhost:3000',  (Only for test use)
 
   ajax: function (config, cb) {
     $.ajax(config).done(function(data, textStatus, jqxhr) {
@@ -12,8 +12,6 @@ url: 'http://localhost:3000',
       cb({jqxher: jqxhr, status: status, error: error});
     });
   },
-
-
 
   register: function (credentials, callback) {
     this.ajax({
@@ -26,7 +24,6 @@ url: 'http://localhost:3000',
     console.log("success");
   },
 
-
   login: function (credentials, callback) {
     this.ajax({
       method: 'POST',
@@ -37,7 +34,6 @@ url: 'http://localhost:3000',
     }, callback);
     console.log("success");
   },
-
 
   logout: function (token, id, callback) {
     this.ajax({
@@ -62,7 +58,6 @@ url: 'http://localhost:3000',
       contentType: 'application/json; charset=utf-8'
     }, callback);
   },
-
 
 
   new_entry: function (token, new_entry, callback) {
@@ -106,32 +101,5 @@ url: 'http://localhost:3000',
     console.log("success");
   },
 
-   list_quick_posts: function(token, list_quick_posts, callback){
-    this.ajax({
-      method: 'GET',
-      url: this.url + '/quick_posts',
-      headers: {
-        Authorization: 'Token token=' + token
-      },
-      contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(list_quick_posts),
-      dataType: 'json'
-    }, callback);
-  },
 
-  new_quick_post: function (token, new_quick_post, callback) {
-    this.ajax({
-      method: 'POST',
-      url: this.url + '/quick_posts',
-      headers: {
-        Authorization: 'Token token=' + token
-      },
-      contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(new_quick_post),
-      dataType: 'json'
-
-    }, callback);
-  },
-
-
-};
+}; //closing myJournal Object Bracket
