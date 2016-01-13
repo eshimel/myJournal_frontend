@@ -870,6 +870,7 @@
 }
 
 .bounceInLeft {
+  display: none;
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
 }

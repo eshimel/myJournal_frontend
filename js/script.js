@@ -97,6 +97,7 @@ $(document).ready(function() {
           } else {
             $('#entries').each(function(){
             this.reset();
+            $('.bounceInLeft').show();
             $('#deleteone').show(1000);
             $('#update').show(1000);
 
