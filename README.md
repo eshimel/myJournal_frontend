@@ -21,11 +21,12 @@ As a user, I need to update titles, so that I can make my personal narrative sou
 
 As a user, I need to delete entries, so that I can have the satisfaction that mirrors ripping pages out of a paper  journal.
 
-Next Phase User Stories
+
 
 As a user, I can rate my day, so that I can track how I'm feeling.
+Next Phase User Stories
 
-As a user, I can look up past rates, so that I refer to past days.
+As a user, I can look up a chart of past rate my days, so that I more easily refer to past days.
 #Wireframes and Supporting Images
 
 ##Why "small" apps are awesome!
@@ -39,10 +40,7 @@ As a user, I can look up past rates, so that I refer to past days.
 
 ## Issues/Next Steps to work on:
 
-The list button lists all entries when not logged in...its an issue with the open_read controller that needs to be addressed, however, the list button after logging in works the way that it should...it lists the current users entries.
-Work on making the rate my feature work.
-
-This is the second project that I created for the project 2 prompt.  StorWe, my first project 2 proved to be more complicated than I was ready to take on earlier in the program, so this project is like a clean start.  
+An improved user view for reading journal entries, as well as deleting and updating them.
 
 
 link to back-end repo  https://github.com/eshimel/myJournal
